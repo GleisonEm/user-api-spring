@@ -1,0 +1,10 @@
+version: '3'
+services:
+  spring-app:
+    image: spring-helloworld
+    build: .
+    ports:
+      - 8939:8939
+    volumes:
+      - ./src:/app/src
+    network_mode: "host"
